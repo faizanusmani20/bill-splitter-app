@@ -23,11 +23,11 @@ pay=total/person
 col1 ,col2, col3 =st.columns(3)
 
 with col1:
-    st.metric("Tip Amount:", f"{tip_amount:.2f}")
+    st.metric("Tip Amount:", f"₹{tip_amount:.2f}")
 
 with col2:
-    st.metric("Total Amount:", f"{total:.2f}")
+    st.metric("Total Amount:", f"₹{total:.2f}")
 
 with col3:
-    st.metric("Each Pay:", f"{pay:.2f}")
+    st.metric("Each Pay:", f"₹{pay:.2f}")
 
