@@ -6,6 +6,25 @@ st.set_page_config(
     layout="centered"
 )
 
+st.markdown(
+    """
+    <style>
+    .bottom-left-footer {
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+        z-index: 100;
+    }
+    </style>
+    <div class="bottom-left-footer">Created by Mohd Faizan Usmani</div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.title("💸 Bill Splitter")
 st.write("Easily Split Bill and Calculate tip with Friends!")
 
