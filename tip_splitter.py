@@ -24,22 +24,18 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
 st.title("💸 Bill Splitter")
 st.write("Easily Split Bill and Calculate tip with Friends!")
 
-amount=st.number_input("Enter Total Bill Amount: ",min_value=0.0)
-tip =st.slider("Tip-Percentage:",0,30)
-person =st.number_input("Number of People: ", min_value=1)
+amount = st.number_input("Enter Total Bill Amount: ", min_value=0.0)
+tip = st.slider("Tip Percentage:", 0, 30)
+person = st.number_input("Number of People: ", min_value=1)
 
-tip_amount= (amount * tip / 100)
-total= amount+tip_amount
-pay=total/person
+tip_amount = (amount * tip / 100)
+total = amount + tip_amount
+pay = total / person
 
-
-
-
-col1 ,col2, col3 =st.columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric("Tip Amount:", f"₹{tip_amount:.2f}")
@@ -49,4 +45,3 @@ with col2:
 
 with col3:
     st.metric("Each Pay:", f"₹{pay:.2f}")
-
